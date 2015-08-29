@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f8d53d265c4e45cd87f500006fbc094a" Name="Diagram1" ZoomLevel="127">
+        <EntityTypeShape EntityType="CSRFDBModel.C__MigrationHistory" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.Applications" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.AspNetRoles" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.AspNetUserClaims" Width="1.5" PointX="10.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.AspNetUserLogins" Width="1.5" PointX="10.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.AspNetUsers" Width="1.5" PointX="8" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.Memberships" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.Notes" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.Profiles" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.Roles" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CSRFDBModel.Users" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="CSRFDBModel.FK_dbo_Memberships_dbo_Applications_ApplicationId" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.FK_dbo_Roles_dbo_Applications_ApplicationId" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.FK_dbo_Users_dbo_Applications_ApplicationId" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.FK_dbo_Memberships_dbo_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.FK_dbo_Profiles_dbo_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="CSRFDBModel.UsersInRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CSRFDBModel.Money" Width="1.5" PointX="5.375" PointY="10.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

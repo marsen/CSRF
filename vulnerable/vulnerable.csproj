@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -165,6 +167,57 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Edmx\Applications.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\AspNetRoles.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\AspNetUserClaims.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\AspNetUserLogins.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\AspNetUsers.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\CRSF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\CRSF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\CRSF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSF.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\C__MigrationHistory.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\Memberships.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\Money.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\Notes.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\Profiles.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\Roles.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edmx\Users.cs">
+      <DependentUpon>CRSF.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,6 +232,23 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Edmx\CRSF.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CRSF.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Edmx\CRSF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CRSF.edmx</DependentUpon>
+      <LastGenOutput>CRSF.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Edmx\CRSF.edmx.diagram">
+      <DependentUpon>CRSF.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Edmx\CRSF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CRSF.edmx</DependentUpon>
+      <LastGenOutput>CRSF.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -236,6 +306,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
