@@ -26,5 +26,15 @@ namespace attack.Controllers
 
             return View();
         }
+
+        public ActionResult Attack()
+        {
+            return View();
+        }
+
+        public ActionResult PostAttack()
+        {
+            return View();
+        }
     }
 }

