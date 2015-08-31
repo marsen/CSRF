@@ -48,18 +48,21 @@ namespace vulnerable.Controllers
                     var donatarius = (from a in csrf.Money
                                       where a.Name == toWho
                                       select a).FirstOrDefault();
-                    if (donor != null && donatarius != null && donor.Balance > money)
+                    if (donor != null && donatarius != null && donor.Balance >= money)
                     {
                         donor.Balance = donor.Balance - money;
                         donatarius.Balance = donatarius.Balance + money;
                     }
+                    else {
+                        return Json(new { Msg = string.Format("${0} 交易失敗，餘額不足。", money) }, JsonRequestBehavior.AllowGet);
+                    }
                     csrf.SaveChanges();
-                    return Json(new { Msg = string.Format("${0} 交易成功", money) });
+                    return Json(new { Msg = string.Format("${0} 交易成功", money) },JsonRequestBehavior.AllowGet);
                 }
             }
             catch(Exception ex) 
             {
-                return Json(new { errMsg = ex.Message });
+                return Json(new { errMsg = ex.Message }, JsonRequestBehavior.AllowGet);
             }
         }
     }
